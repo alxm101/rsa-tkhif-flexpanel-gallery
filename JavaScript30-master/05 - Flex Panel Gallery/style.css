@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,8 +28,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 20px;
+    color: rgba(65, 241, 11, 0.932);
+    font-size: 35px;
     text-shadow: 1px 1px 2px black;
     transition:
       font-size 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
@@ -40,14 +41,13 @@
     z-index: 1;
   }
   
-  /* Hover*/
   .panel::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); 
+    background: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
@@ -57,7 +57,6 @@
     opacity: 1;
   }
   
-  
   .panel:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -65,9 +64,8 @@
   }
   
   .panel > * {
-    z-index: 1; 
+    z-index: 1;
   }
-  
   
   .panel > *:first-child {
     transform: translateY(-100%);
@@ -89,41 +87,52 @@
     transition: transform 0.5s;
   }
   
-  /* change these later */
+  /* Panel Background Images */
   .panel1 {
-    background-image: url('https://source.unsplash.com/random/800x600?nature');
+    background-image: url('https://global.discourse-cdn.com/forza/original/4X/f/b/e/fbe5410313385e55e48c35234b61f230f2d95b70.jpeg');
   }
+  
   .panel2 {
-    background-image: url('https://source.unsplash.com/random/800x600?city');
+    background-image: url('https://cdn.ferrari.com/cms/network/media/img/resize/5d36d3bf7e98e13abbbed080-ferrari-812superfast_2017-dynamics-focuson_02_d');
   }
+  
   .panel3 {
-    background-image: url('https://source.unsplash.com/random/800x600?space');
+    background-image: url('https://i.pcmag.com/imagery/roundups/01l4AvaewFPRvEV3gAY8iO2-2..v1630352113.jpg');
   }
+  
   .panel4 {
-    background-image: url('https://source.unsplash.com/random/800x600?ocean');
+    background-image: url('https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/styles/autox720/azure/2022-03/rs1.snow_.2020-4.jpeg?itok=3Tqqj0sy');
   }
+  
   .panel5 {
-    background-image: url('https://source.unsplash.com/random/800x600?forest');
+    background-image: url('https://www.som.com/wp-content/uploads/2021/08/205221_000_N263_large-scaled.jpg');
   }
+  
   .panel6 {
-    background-image: url('https://source.unsplash.com/random/800x600?galaxy');
+    background-image: url('https://adelsfamoushalalfood.com/wp-content/uploads/2024/07/adels-halal-food-nyc1.png');
   }
+  
   .panel7 {
-    background-image: url('./images/photo7.jpg');
+    background-image: url('https://media.istockphoto.com/id/1297470894/photo/tokyos-famous-shinjuku-district.jpg?s=612x612&w=0&k=20&c=OIvEp6hTs09x7jgSebzQ4AuSaGaUIsynov7mvxFzx0Y=');
   }
+  
   .panel8 {
-    background-image: url('./images/photo8.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwB0snINBQs1XXbXlXhh8SVCMqH9b0ON0DjQ&s');
   }
+  
   .panel9 {
-    background-image: url('./images/photo9.jpg');
+    background-image: url('https://di-uploads-pod37.dealerinspire.com/cavendercadillac/uploads/2024/07/ESCALADE-300x300.jpg');
   }
+  
   .panel10 {
-    background-image: url('./images/photo10.jpg');
+    background-image: url('https://vacatis.com/wp-content/uploads/2023/11/Burj-Khalifa-Floors-789x1024.webp');
   }
+  
   .panel11 {
-    background-image: url('./images/photo11.jpg');
+    background-image: url('https://media.istockphoto.com/id/1203988866/photo/hamburger-with-flying-ingredients.jpg?s=612x612&w=0&k=20&c=_9kctCF9OX33WmIaWLgF8EthWtMZy39hdEY9LZtQHeg=');
   }
+  
   .panel12 {
-    background-image: url('./images/photo12.jpg');
+    background-image: url('https://preview.redd.it/trading-setup-2-24-monitors-for-charts-1-vertical-21-v0-8b5kgde986mc1.jpeg?auto=webp&s=d4701be6c874b5033198f5df250be282f674c0d7');
   }
   
