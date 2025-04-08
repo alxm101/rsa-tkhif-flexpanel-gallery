@@ -40,14 +40,14 @@
     z-index: 1;
   }
   
-  /* Hover overlay */
+  /* Hover*/
   .panel::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* dark overlay */
+    background: rgba(0, 0, 0, 0.3); 
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
@@ -57,7 +57,7 @@
     opacity: 1;
   }
   
-  /* Hover visual boost */
+  
   .panel:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -65,10 +65,10 @@
   }
   
   .panel > * {
-    z-index: 1; /* bring text above overlay */
+    z-index: 1; 
   }
   
-  /* Slide text in/out */
+  
   .panel > *:first-child {
     transform: translateY(-100%);
   }
@@ -89,7 +89,7 @@
     transition: transform 0.5s;
   }
   
-  /* Panel backgrounds (change these later) */
+  /* change these later */
   .panel1 {
     background-image: url('https://source.unsplash.com/random/800x600?nature');
   }
@@ -107,5 +107,23 @@
   }
   .panel6 {
     background-image: url('https://source.unsplash.com/random/800x600?galaxy');
+  }
+  .panel7 {
+    background-image: url('./images/photo7.jpg');
+  }
+  .panel8 {
+    background-image: url('./images/photo8.jpg');
+  }
+  .panel9 {
+    background-image: url('./images/photo9.jpg');
+  }
+  .panel10 {
+    background-image: url('./images/photo10.jpg');
+  }
+  .panel11 {
+    background-image: url('./images/photo11.jpg');
+  }
+  .panel12 {
+    background-image: url('./images/photo12.jpg');
   }
   
