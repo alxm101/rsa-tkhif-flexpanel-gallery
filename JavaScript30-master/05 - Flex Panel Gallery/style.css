@@ -7,34 +7,68 @@
   body {
     font-family: 'Helvetica', sans-serif;
     height: 100vh;
+    background: #000;
     overflow: hidden;
   }
   
   .panels {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 50vh);
     width: 100%;
     height: 100vh;
   }
   
   .panel {
+    position: relative;
     background-size: cover;
     background-position: center;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     color: white;
+    font-size: 20px;
     text-shadow: 1px 1px 2px black;
     transition:
       font-size 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      flex 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      background 0.2s;
+      transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 1;
   }
   
-  /* Slide text in from top and bottom */
+  /* Hover overlay */
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* dark overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+  
+  .panel:hover::before {
+    opacity: 1;
+  }
+  
+  /* Hover visual boost */
+  .panel:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+  }
+  
+  .panel > * {
+    z-index: 1; /* bring text above overlay */
+  }
+  
+  /* Slide text in/out */
   .panel > *:first-child {
     transform: translateY(-100%);
   }
@@ -43,27 +77,19 @@
     transform: translateY(100%);
   }
   
-  /* Expanded panel */
   .panel.open {
-    flex: 5;
-    font-size: 40px;
+    transform: scale(1.1);
+    z-index: 3;
+    font-size: 30px;
   }
   
-  /* Animate text sliding in */
   .panel.open-active > *:first-child,
   .panel.open-active > *:last-child {
     transform: translateY(0);
     transition: transform 0.5s;
   }
   
-  /* Optional: Panel hover effect */
-  .panel:hover {
-    filter: brightness(1.2);
-    transform: scale(1.01);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Background images for each panel */
+  /* Panel backgrounds (change these later) */
   .panel1 {
     background-image: url('https://source.unsplash.com/random/800x600?nature');
   }
@@ -71,12 +97,15 @@
     background-image: url('https://source.unsplash.com/random/800x600?city');
   }
   .panel3 {
-    background-image: url('https://source.unsplash.com/random/800x600?ocean');
+    background-image: url('https://source.unsplash.com/random/800x600?space');
   }
   .panel4 {
-    background-image: url('https://source.unsplash.com/random/800x600?space');
+    background-image: url('https://source.unsplash.com/random/800x600?ocean');
   }
   .panel5 {
     background-image: url('https://source.unsplash.com/random/800x600?forest');
+  }
+  .panel6 {
+    background-image: url('https://source.unsplash.com/random/800x600?galaxy');
   }
   
